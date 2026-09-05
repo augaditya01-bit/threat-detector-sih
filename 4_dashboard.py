@@ -64,7 +64,7 @@ while True:
             display_df = df.sort_values("flow_id", ascending=False).head(25)
             st.dataframe(
                 display_df[["timestamp", "flow_id", "threat_class", "confidence"]],
-                use_container_width=True,
+                width="stretch",
             )
 
             st.subheader("Inspect Evidence for a Specific Alert")
